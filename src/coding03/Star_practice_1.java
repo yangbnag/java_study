@@ -13,10 +13,15 @@ public class Star_practice_1 {
             for (int a = 0; a < i ; a++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < (num*2)-((2*i)-1); j++) {
+            for (int j = 0; j < (num*2-1)-(2*i); j++) {
                 System.out.print("*");
             }
-
+/*9 0 =
+* 7 1
+* 5 2
+* 3 3
+* 1 4
+* */
             System.out.println();
         }
 

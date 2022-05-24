@@ -8,9 +8,9 @@ public class ArrayDeletQuiz {
 
         Scanner sc = new Scanner(System.in);
         String[] members = {"영웅재중","최강창민","시아준수","믹키유천","유노윤호"};
-        System.out.println("삭제할 학생의 별명을 입력하세요!");
 
         while(true) {
+        System.out.println("삭제할 학생의 별명을 입력하세요!");
             System.out.print(">>");
             String Delet = sc.next();
             int idx = -1;
@@ -34,6 +34,7 @@ public class ArrayDeletQuiz {
                 }
                 members = temp; temp=null;
                 System.out.println("삭제 후 정보 : " + Arrays.toString(members));
+                sc.close();
                 break;
             }
         }

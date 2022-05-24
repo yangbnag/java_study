@@ -10,6 +10,8 @@
 
 package day01;
 
+import java.util.Scanner;
+
 // 자바는 클래스라는 블록에서 코드가 시작됩니다.
 public class Comment {
 
@@ -25,5 +27,9 @@ public class Comment {
         System.out.println("hello");
         int a = 10, b = 20;
         System.out.println(a+b);
+
+        Scanner sc = new Scanner(System.in);
+        int startPlayer = (int) Math.floor(Math.random() * 3) + 1;
+        System.out.println(startPlayer);
     } // end main
 } // end class
