@@ -16,17 +16,11 @@ public class BackJun_2577 {
         System.out.println(multiplication);
 
         //0 부터 9까지의 등장 횟수를 카운팅해서 저장할 배열
-        int[] arr = new int[10];
+        int[] arr = {-1, -1,-1,-1,-1,-1,-1,-1,-1,-1};
+        int cnt = 0;
         //17,037,300
-        for (int i = 1; i <0; i++) {
-            System.out.print((multiplication / 1 ) % 10);
-             System.out.print((multiplication / 10) % 10);
-            System.out.print((multiplication / 100) % 10);
-            System.out.print((multiplication / 1000) % 10);
-            System.out.print((multiplication / 10000) % 10);
-            System.out.print((multiplication / 100000) % 10);
-            System.out.print((multiplication / 1000000) % 10);
-            System.out.print((multiplication / 10000000) % 10);
+        for (int i = 0; i <arr.length; i++) {
+
 
         }
 
