@@ -1,5 +1,5 @@
 package codingtest.programmers.level1;
-
+// 이상한 문자열
 import java.util.Arrays;
 
 public class L12930 {
@@ -19,6 +19,7 @@ public class L12930 {
                 newS[i] = " ";
                 continue;
             }
+
 
             String toUpperCase = String.valueOf((s.charAt(i))).toUpperCase();
             if (i == 0) {
