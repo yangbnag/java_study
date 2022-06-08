@@ -3,7 +3,7 @@ package day10.encap;
 public class Main {
     // 정보 은닉을 하지 않았을경우 발생하는 문제점 살펴보기
     public static void main(String[] args) {
-
+/*
     Car myCar = new Car("그랜져"); //myCar 객체 생성(인스턴스)
     // 외부 클래스인 main에서 myCar 객체에 필드 값에 접근이 가능핟.
 
@@ -23,6 +23,28 @@ public class Main {
 
         myCar.setMode('D');
         System.out.println("현재 모드: " + myCar.getMode());
-    }
+    */
+        Car car = new Car("소나타");
+        // 시동 먼저 걸고 -> 엔진오일 순환 -> 연료를 주입 -> 실린더 작동
+        car.engineStart();
+//        car.injectOil();
+//        car.injectGasoline();
+//        car.moveCylinder();
+        // public 으로 설정된 메서드를 사용자는 볼수 있고
+        // private 로 설정된 메서드는 사용자가 볼수 없다.
+        // 메서드의 순서가 틀리지 않도록 engineStart만 실행하면
+        // 다 작동하도록 설정 하는 것이 캡슐화.
 
+        // 기능이 너무 많이 보여도 비효율적이다.
+        // 위의 기능들은 시동이 걸리면 알아서 작동되게 하면 사용자가 편하다.
+
+        car.setMode('D');
+        car.setSpeed(100);
+        car.setSpeed(0);
+        car.engineStop();
+
+
+
+
+    }
 }
