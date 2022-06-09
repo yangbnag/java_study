@@ -1,14 +1,9 @@
 package OopPractice.cafe;
 
 public class Starbucks {
-    // 필드 선언
+        Employee employee;
+        Client client;
+        Menu menu;
+        Counter counter;
 
-    String A;
-    String B;
-    String C;
-    String D;
-    String E;
-    // 고유속성
-
-    // 상태속성
-}
+    }
