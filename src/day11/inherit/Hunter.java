@@ -3,6 +3,7 @@ package day11.inherit;
 public class Hunter extends Player {
 
     public int arrow; // 화살수
+    public String job = "사냥꾼";
 
     public Hunter(String name) {
         // 부모 객체를 만들어야 한다.

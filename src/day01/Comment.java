@@ -31,5 +31,10 @@ public class Comment {
         Scanner sc = new Scanner(System.in);
         int startPlayer = (int) Math.floor(Math.random() * 3) + 1;
         System.out.println(startPlayer);
+
+        double x = 3.3;
+        int y = (int) x;
+
+        System.out.println(y);
     } // end main
 } // end class

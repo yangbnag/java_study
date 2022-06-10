@@ -11,7 +11,7 @@ public class Player extends Object {
     public int exp;
 
     public Player(String name){
-        System.out.println("Player 생성자 호출!");
+//        System.out.println("Player 생성자 호출!");
         this.name = name;
         this.level = 1;
         this.hp = 35;
@@ -24,4 +24,6 @@ public class Player extends Object {
         System.out.println("# hp : " + hp);
         System.out.println("# exp : " + exp);
     }
+
+
 }
