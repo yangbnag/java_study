@@ -1,35 +1,11 @@
-package datastructure.chap06.bubble;
+package datastructure.chap07.merge;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
-/*
-
-          |                 |
-          0   1   2   3     4  5   6   7
-       [ 24, 32, 42, 60 ] [ 5, 15, 45, 90 ]
-
-       [  5 ]
-
-       - 병합 과정에서 뒤쪽 배열의 값이 작은경우 5의 값이 4번인덱스에서 0번으로 이동하므로
-         버블정렬에서 4번 스왑이 일어났다고 볼 수 있음
-
-                                |  |
-          0   1   2   3     4   5  6   7
-       [ 24, 32, 42, 60 ] [ 5, 15, 45, 90 ]
-
-       [  5, 15, 24, 32  , 42, 45 ]
-
-       - 병합 과정에서 뒤쪽 배열의 값이 작은경우 45의 값이 6번인덱스에서 5번으로 이동하므로
-         버블정렬에서 1번 스왑이 일어났다고 볼 수 있음
-
-    */
-public class 버블_소트_1517 {
-
-    private static int[] temp; // 병합 작업에 쓸 임시 배열
-    private static long count; // swap 횟수 누적
+// 백준 2751
+public class 수_정렬하기_2751_백준 {
 
     public static void main(String[] args) throws IOException {
 
@@ -38,16 +14,21 @@ public class 버블_소트_1517 {
         int N = Integer.parseInt(br.readLine());
         int[] A = new int[N];
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            A[i] = Integer.parseInt(st.nextToken());
+            A[i] = Integer.parseInt(br.readLine());
         }
 
         sort(A);
 
-        System.out.println(count);
-
+        StringBuilder sb = new StringBuilder();
+        for (int i : A) {
+            sb.append(i).append("\n");
+        }
+        System.out.println(sb);
     }
+
+    // 병합 작업에 쓰일 임시 배열
+    private static int[] temp;
 
     // 병합 정렬 알고리즘
 
@@ -88,7 +69,6 @@ public class 버블_소트_1517 {
             if (temp[p1] < temp[p2]) {
                 arr[insertSpot++] = temp[p1++];
             } else {
-                count += (p2 - insertSpot);
                 arr[insertSpot++] = temp[p2++];
             }
         }
@@ -111,31 +91,4 @@ public class 버블_소트_1517 {
         temp = new int[arr.length];
         mergeSort(arr, 0, arr.length - 1);
     }
-
 }
-
-/*
-BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-
-        int N = Integer.parseInt(br.readLine());
-        int[] a = new int[N];
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < N; i++) {
-            a[i] = Integer.parseInt(st.nextToken());
-        }
-
-        int count = 0;
-        // 비교 범위에 대한 루프
-        for (int i = a.length - 1; i > 0; i--) {
-            // 실제 비교
-            for (int j = 0; j < i; j++) { // 왼쪽이 더 크면 자리 바꿈
-                // swap
-                if(a[j] > a[j + 1]) {
-                    count++;
-                }
-            }
-        }
-
-        System.out.println(count);
- */
