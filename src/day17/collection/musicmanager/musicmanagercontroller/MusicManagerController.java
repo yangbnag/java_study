@@ -1,7 +1,9 @@
 package day17.collection.musicmanager.musicmanagercontroller;
 
 import day17.collection.musicmanager.mo.vo.Artist;
+import day18.api.io.obj.Human;
 
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
@@ -56,19 +58,60 @@ public class MusicManagerController {
        } else System.out.println("해당 가수는 등록되지 않은 가수 입니다.");
     }
 
-    public Artist getArtist() {
-        return artist;
+    // 세이브 파일 저장할 디렉토리 생성
+    public void makeDirectory(){
+        File dir = new File("E:/music");
+        if(!dir.exists()) dir.mkdirs();
     }
 
-    public void setArtist(Artist artist) {
-        this.artist = artist;
+    // 세이브 기능
+    public void sava(){
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("E:/music/m.sav"))) {
+
+            oos.writeObject(map); // 객체를 저장하려면 데이터를 바이트 형태로 직렬화 해야 한다.
+                                  // 휴먼이 직렬화 되어 있지 않다는 에러 발생
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public Map<String, Artist> getMap() {
-        return map;
+    // 로드 기능
+    public void load() {
+        File file = new File("E:/music/m.sav");
+
+        if (file.exists()) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("E:/music/m.sav"))) {
+
+                map = (Map<String, Artist>) ois.readObject(); // 다운 캐스팅
+
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
-    public void setMap(Map<String, Artist> map) {
-        this.map = map;
+        public Artist getArtist () {
+            return artist;
+        }
+
+        public void setArtist (Artist artist){
+            this.artist = artist;
+        }
+
+        public Map<String, Artist> getMap () {
+            return map;
+        }
+
+        public void setMap (Map < String, Artist > map){
+            this.map = map;
+        }
     }
-}
+

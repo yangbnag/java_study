@@ -12,6 +12,9 @@ public class MainMenu {
     Scanner sc = new Scanner(System.in);
 
     public void mainMenu() {
+        mmc.makeDirectory();
+        mmc.load();
+
         while(true) {
         int s = mmc.getMap().size();
             System.out.println("*****음악 관리 프로그램*****");
@@ -27,6 +30,7 @@ public class MainMenu {
             switch (menu) {
                 case 1:
                     add();
+                    mmc.sava();
                     break;
                 case 2:
                     search();

@@ -1,8 +1,9 @@
 package day17.collection.musicmanager.mo.vo;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Artist {
+public class Artist implements Serializable {
 
     private String ArtistName; // 가수이름
 
