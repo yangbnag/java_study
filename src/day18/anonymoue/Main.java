@@ -1,5 +1,8 @@
 package day18.anonymoue;
 
+import day08.modi.pac1.A;
+import utility.Util;
+
 public class Main {
     // 내부 클래스 -> 클래스 안에 이너 클래스 만들기!
     public static class SubOperator implements Calculator {
@@ -34,8 +37,8 @@ public class Main {
 
         System.out.println(divCal.operate(100, 50)); // 람다로 나누기 하기
 
-/*
-        PowerfulOperator po = (f,s cal) -> cal.operate(f,s);
+
+        PowerfulOperator po = (f, s , cal) -> cal.operate(f, s);
 
         System.out.println(po.powerOperate(300,500, new AddOperator()));
         System.out.println(po.powerOperate(700,200, new SubOperator()));
@@ -46,7 +49,7 @@ public class Main {
             }
         }));
         System.out.println(po.powerOperate(1000,200,(n1,n2)->n1/n2));
-*/
+
 /*
 
 
