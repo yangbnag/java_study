@@ -76,6 +76,7 @@ public class Binarytree {
             }
 
         }
+    }
 
         //============순회=============//
 
@@ -88,7 +89,6 @@ public class Binarytree {
 
             }
 
-
             // 1. 루트 (중앙)노드 값을 출력
             // 2. 왼쪽 자식으로 재귀호출 반복
             // 3. 오른쪽 자식 쪽으로 재귀호출 반복
@@ -96,5 +96,5 @@ public class Binarytree {
         }
 
 
-    }
+
 }
