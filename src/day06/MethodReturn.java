@@ -10,8 +10,9 @@ public class MethodReturn {
     }
 
     // 두 개 정수의 합을 출력하는 함수
-   static void showAddResult(int n1, int n2){ // 출력만 하는 함수는 리턴값이 없으므로 타입을 void로 입력
-        System.out.printf("%d+%d+%d",n1,n2,n1+n2);
+   static void showAddResult(int n1, int n2)
+   { // 출력만 하는 함수는 리턴값이 없으므로 타입을 void로 입력
+        System.out.printf("%d+%d = %d",n1,n2,n1+n2);
     }
 
     //이름을 출력 5글자 넘으면 출력x
@@ -70,7 +71,7 @@ public class MethodReturn {
         //void 함수는 다른 함수의 인자값으로 넣을수 없다.
 
         //void 함수의 활용 예예
-        //showAdResult(add(4,4),add(5,7));
+//        showAddResult(add(4,4),add(5,7));
 
         callName("짝짝이");
         callName("주차왕파킹맨");

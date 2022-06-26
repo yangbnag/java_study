@@ -215,7 +215,7 @@ public class BinaryTree {
             candidate.setLeftChild(current.getLeftChild());
 
         }
-            
+     return false;
     }
 
     // 후보노드 찾기

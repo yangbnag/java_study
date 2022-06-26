@@ -66,9 +66,14 @@ public class MethodParam {
         // 엄마 카레해줘 라는 함수(감자, 양파, 가루);
         //엄마 카레해줘 함수는 카레를 리턴해줌.
 
+        System.out.println("22.06.25");
+        System.out.println(addAll(new int[] {1,2,3,4,5,6,7,8,9,10}));
+
         //addAll에 배열값 바로 넣기
         int sum2 = addAll(new int[]{3,6,9,12}); // new int 생략은 선언 할때만 가능
         System.out.println(sum2);
+
+        // 인수 자리에 배열을 넣어도 실행이 된다.
 
         // addAll(int ... numbers) 을 쓰면 매개변수 자리에 배열을 넣어도 되고, 숫자를 넣어도 된다.
         int sum3 = addAll(5,10,15,20,25,30);
